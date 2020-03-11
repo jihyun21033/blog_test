@@ -4,6 +4,9 @@ from .models import Post
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte = timezone.now()).order_by('published_date')
-    return render(request, './post_list.html', {'posts' : posts})
+    return render(request, 'blog/post_list.html', {'posts' : posts})
+
+def login_data(request):
+    return render(request, 'blog/login_data.html', {})
 
 # Create your views here.
