@@ -1,6 +1,13 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+  {% for login in login_data %}
+    <div>
+      <h1>{{ login.info_id }}</h1>
+      <p>{{ login.login_date }}</p>
+    </div>
+  {% endfor %}
+<!--
   {% for post in posts %}
     <div class = "post">
       <h1>{{ post.title }}</h1>
@@ -10,4 +17,5 @@
     </div>
     </div>
 {% endfor %}
+-->
 {% endblock %}

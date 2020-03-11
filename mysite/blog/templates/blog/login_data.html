@@ -1,11 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
   <p style = "text-align:center;">
-    ID : <input type = "text" name = "name" size = "20">
-    Password : <input type = "text" name = "password" size = "20">
+   <form action = "" method = "post">
+      {% csrf_token %}
+      {{ form|linebreaks }}
   </br>
   </br>
-    <input type = "submit" value = "login" onclick = "location.href='..'">
+    <input type = "submit" value="submit" name="submit">
   </p>
+
 {% endblock %}

@@ -17,7 +17,7 @@ class Post(models.Model):
         
     def __str__(self):
         return self.title
-    
+
 class Infodata(models.Model):
     info_id = models.CharField(max_length = 100)
     info_pw = models.CharField(max_length = 100)
@@ -25,6 +25,5 @@ class Infodata(models.Model):
     
     def __str__(self):
         return self.info_id
-
 
 # Create your models here.
